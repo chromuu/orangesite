@@ -139,12 +139,17 @@ function ContentSection({ section }: { section: string }) {
   const content = sectionContent[section as keyof typeof sectionContent] || sectionContent["Team Fortress 2"]
 
   return (
-    <div className="grid grid-cols-3 gap-8" style={{ fontFamily: "Arial, sans-serif", fontWeight: 300 }}>
+    <div className="grid grid-cols-3 gap-8 relative">
+      {/* Vertical Dividers */}
+      <div className="absolute -left-8 top-0 bottom-0 w-[1px] bg-black"></div>
+      <div className="absolute left-[33.33%] top-0 bottom-0 w-[1px] bg-black"></div>
+      <div className="absolute left-[66.66%] top-0 bottom-0 w-[1px] bg-black"></div>
+
       <div className="text-white space-y-4">
         <h2 className="text-xl font-light">.info</h2>
-        <p className="text-sm opacity-80 font-mono">{content.info.title}</p>
+        <p className="text-sm opacity-80">{content.info.title}</p>
         <div className="space-y-4">
-          <p className="font-mono">{content.info.description}</p>
+          <p>{content.info.description}</p>
         </div>
       </div>
 

@@ -76,7 +76,7 @@ export default function OrangeBox() {
 
       {/* Footer */}
       <footer className="h-16 bg-orange-dark flex items-center px-8 gap-4">
-        <div className="text-orange uppercase text-sm font-light" style={{ fontFamily: "Arial, sans-serif" }}>Valve</div>
+        <div className="text-orange uppercase text-sm font-light" style={{ fontFamily: "Arial, sans-serif" }}>Momichisky Corp</div>
         <div className="w-6 h-6 bg-orange rounded" />
       </footer>
     </div>
@@ -142,9 +142,9 @@ function ContentSection({ section }: { section: string }) {
     <div className="grid grid-cols-3 gap-8" style={{ fontFamily: "Arial, sans-serif", fontWeight: 300 }}>
       <div className="text-white space-y-4">
         <h2 className="text-xl font-light">.info</h2>
-        <p className="text-sm opacity-80">{content.info.title}</p>
+        <p className="text-sm opacity-80 font-mono">{content.info.title}</p>
         <div className="space-y-4">
-          <p>{content.info.description}</p>
+          <p className="font-mono">{content.info.description}</p>
         </div>
       </div>
 
